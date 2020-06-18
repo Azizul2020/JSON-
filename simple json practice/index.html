@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var xhr=new XMLHttpRequest();
+		xhr.open("post","a.json",true);
+		xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+		xhr.onload=function(){
+			var a=JSON.parse(xhr.responseText);
+			for(x in a){
+				for(y in a[x]){
+					console.log(a[x][y]);
+				}
+			}
+		}
+		xhr.send();
+	</script>
+</body>
+</html>
